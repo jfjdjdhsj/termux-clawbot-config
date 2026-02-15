@@ -119,11 +119,35 @@ openclaw --version
 ### 一键修复命令：
 
 ```bash
-cd /root && \
-echo '{"lo":[{"address":"127.0.0.1","netmask":"255.0.0.0","family":"IPv4","mac":"00:00:00:00:00:00","internal":true,"cidr":"127.0.0.1/8"}]}' > ni.json && \
-find /root/.nvm/versions/node/*/lib/node_modules/openclaw/dist -type f -name "*.js" -exec sed -i 's/os\.networkInterfaces()/{\"lo\":[{\"address\":\"127.0.0.1\",\"netmask\":\"255.0.0.0\",\"family\":\"IPv4\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"127.0.0.1\/8\"}]}/g' {} \; 2>/dev/null && \
-find /usr/local/lib/node_modules/openclaw/dist -type f -name "*.js" -exec sed -i 's/os\.networkInterfaces()/{\"lo\":[{\"address\":\"127.0.0.1\",\"netmask\":\"255.0.0.0\",\"family\":\"IPv4\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"127.0.0.1\/8\"}]}/g' {} \; 2>/dev/null && \
-echo "✓ 修复完成！"
+cd /root && cat > fix_os.js << 'EOFPATCH'
+const Module = require('module');
+const originalLoad = Module._load;
+
+Module._load = function (request, parent, isMain) {
+    const module = originalLoad.apply(this, arguments);
+    
+    if (request === 'os') {
+        const originalNI = module.networkInterfaces;
+        module.networkInterfaces = function() {
+            return {
+                "lo": [{
+                    "address": "127.0.0.1",
+                    "netmask": "255.0.0.0",
+                    "family": "IPv4",
+                    "mac": "00:00:00:00:00:00",
+                    "internal": true,
+                    "cidr": "127.0.0.1/8"
+                }]
+            };
+        };
+    }
+    
+    return module;
+};
+EOFPATCH
+```
+```bash
+echo 'alias openclaw="NODE_OPTIONS=\"--require /root/fix_os.js\" openclaw"' >> ~/.bashrc
 ```
 
 ---
