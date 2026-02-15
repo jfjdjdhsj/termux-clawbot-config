@@ -32,7 +32,7 @@ proot-distro login ubuntu
 
 ---
 
-## 四、切换清华源（加速下载）
+## 四、切换清华源
 
 ```bash
 tee /etc/apt/sources.list > /dev/null <<'EOF'
@@ -65,7 +65,7 @@ apt install -y curl ca-certificates bash git
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-### 3️⃣ 让 nvm 永久生效
+### 3️⃣ nvm 设置
 
 ```bash
 echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
@@ -132,6 +132,5 @@ openclaw onboard
 
 ```bash
 openclaw gateway
-```
 ```
 
