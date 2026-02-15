@@ -3,6 +3,9 @@
 > 使用 proot-distro 安装 Ubuntu 运行 OpenClaw
 
 ---
+##下载安装termux
+https://github.com/hanxinhao000/ZeroTermux/releases
+
 
 ## 一、安装 proot-distro
 
