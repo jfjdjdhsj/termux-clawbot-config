@@ -4,7 +4,7 @@
 
 ---
 
-## 下载安装zerotermux（termux也一样）
+## 下载安装zerotermux（termux可也可以）
 https://github.com/hanxinhao000/ZeroTermux/releases
 
 
