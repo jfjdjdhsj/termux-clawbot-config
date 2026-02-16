@@ -1,4 +1,4 @@
-# termux-clawbot-config
+## 手机termux不是openclaw
  
 > 使用 proot-distro 安装 Ubuntu 运行 OpenClaw
 
