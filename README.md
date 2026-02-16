@@ -167,4 +167,9 @@ openclaw onboard
 ```bash
 openclaw gateway
 ```
+## 十、启动webui，按电源下键，切换会话，新对话
+```bash
+openclaw  dashboard
+```
 
+访问http://127.0.0.1:18789/#token=，复制全部访问
