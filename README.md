@@ -152,6 +152,10 @@ EOFPATCH
 echo 'alias openclaw="NODE_OPTIONS=\"--require /root/fix_os.js\" openclaw"' >> ~/.bashrc
 ```
 
+```bash
+source ~/.bashrc
+```
+
 ---
 
 ## 八、启动 OpenClaw 进行配置
