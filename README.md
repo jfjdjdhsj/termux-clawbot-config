@@ -116,7 +116,7 @@ openclaw --version
 
 在 proot 环境中，`os.networkInterfaces()` 可能返回异常，导致 OpenClaw 启动报错。
 
-修复成功的版本2026-2-14，后续更新可能失效
+修复成功的版本2026.2.15，后续更新可能失效
 
 ### 一键修复命令：
 
