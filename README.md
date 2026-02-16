@@ -1,4 +1,4 @@
-## 手机termux不是openclaw
+## 手机termux部署openclaw
  
 > 使用 proot-distro 安装 Ubuntu 运行 OpenClaw
 
