@@ -59,12 +59,7 @@ EOF
 apt update
 apt upgrade -y
 ```
-### 一键安装脚本推荐
-```
-bash <(curl -fsSL -H 'Cache-Control: no-cache' "https://raw.githubusercontent.com/jfjdjdhsj/termux-clawbot-config/main/termux-openclaw.sh?t=$(date +%s)")
-```
 
-下面⬇️是手动安装教程
 ---
 
 ## 五、安装 Node.js（使用 nvm）
@@ -74,7 +69,12 @@ bash <(curl -fsSL -H 'Cache-Control: no-cache' "https://raw.githubusercontent.co
 ```bash
 apt install -y curl ca-certificates bash git
 ```
+### 一键安装脚本推荐
+```
+bash <(curl -fsSL -H 'Cache-Control: no-cache' "https://raw.githubusercontent.com/jfjdjdhsj/termux-clawbot-config/main/termux-openclaw.sh?t=$(date +%s)")
+```
 
+下面⬇️是手动安装教程
 ### 2️⃣ 安装 nvm
 
 ```bash
