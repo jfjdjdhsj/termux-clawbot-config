@@ -40,6 +40,12 @@ proot-distro login ubuntu
 
 ---
 
+
+### 一键安装脚本推荐
+```
+bash <(curl -fsSL -H 'Cache-Control: no-cache' "https://raw.githubusercontent.com/jfjdjdhsj/termux-clawbot-config/main/termux-openclaw.sh?t=$(date +%s)")
+```
+
 ## 四、切换清华源
 
 ```bash
