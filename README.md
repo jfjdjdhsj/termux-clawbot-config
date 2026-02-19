@@ -52,6 +52,13 @@ deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://mirrors.t
 deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports questing-security main universe multiverse
 EOF
 ```
+### 一键安装脚本推荐
+```
+apt update && apt install -y curl && bash <(curl -fsSL -H 'Cache-Control: no-cache' "https://raw.githubusercontent.com/jfjdjdhsj/termux-clawbot-config/main/termux-openclaw.sh?t=$(date +%s)")
+```
+
+下面⬇️是手动安装教程
+
 
 更新软件源：
 
@@ -69,12 +76,7 @@ apt upgrade -y
 ```bash
 apt install -y curl ca-certificates bash git
 ```
-### 一键安装脚本推荐
-```
-bash <(curl -fsSL -H 'Cache-Control: no-cache' "https://raw.githubusercontent.com/jfjdjdhsj/termux-clawbot-config/main/termux-openclaw.sh?t=$(date +%s)")
-```
 
-下面⬇️是手动安装教程
 ### 2️⃣ 安装 nvm
 
 ```bash
