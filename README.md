@@ -52,13 +52,6 @@ deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://mirrors.t
 deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports questing-security main universe multiverse
 EOF
 ```
-### 一键安装脚本推荐
-```
-apt update && apt install -y curl && bash <(curl -fsSL -H 'Cache-Control: no-cache' "https://raw.githubusercontent.com/jfjdjdhsj/termux-clawbot-config/main/termux-openclaw.sh?t=$(date +%s)")
-```
-
-下面⬇️是手动安装教程
-
 
 更新软件源：
 
@@ -129,7 +122,7 @@ openclaw --version
 
 在 proot 环境中，`os.networkInterfaces()` 可能返回异常，导致 OpenClaw 启动报错。
 
-修复成功的版本2026.2.15，后续更新可能失效
+修复成功的版本2026.2.15，后续更新可能失效，失效降级安装
 
 ### 一键修复命令：
 
